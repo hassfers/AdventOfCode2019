@@ -6,7 +6,6 @@
 //  Copyright © 2019 Stefan Haßferter. All rights reserved.
 //
 
-import Foundation
 
-print("Hello, World!")
 
+DayOne()
