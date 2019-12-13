@@ -5,55 +5,49 @@
 //  Created by Stefan Haßferter on 12.12.19.
 //  Copyright © 2019 Stefan Haßferter. All rights reserved.
 //
+//address = index of Array
+
 
 class IntCode{
-    enum Commands: Int{
+    enum Instruction: Int{
         case add = 1
         case multiply = 2
-        case finised = 99
+        case finished = 99
     }
     
     var data: [Int]
-    var commands =  [[Int]]()
     
     init(data:[Int]){
         self.data = data
-        parseCommands()
     }
     
     func run(){
-        for index in 0..<commands.count{
-            if runCommandSet(set: commands[index]){
-                return
+        startCommands(from: 0)
+    }
+    
+    func startCommands(from startposition: Int) {
+        var stackpointer = startposition
+        while data[stackpointer] != 99 {
+            switch Instruction.init(rawValue: data[stackpointer]) {
+            case .add:
+                data[data[stackpointer + 3]] = data[data[stackpointer + 1]] + data[data[stackpointer + 2]]
+                stackpointer += 4
+            case .multiply:
+                data[data[stackpointer + 3]] = data[data[stackpointer + 1]] * data[data[stackpointer + 2]]
+                stackpointer += 4
+            case .finished:
+                break
+            default:
+                fatalError()
+                break
             }
         }
     }
     
-    func runCommandSet(set:[Int])-> Bool {
-        switch Commands.init(rawValue: set[0]) {
-        case .add:
-            data[set[3]] = data[set[1]] + data[set[2]]
-        case .multiply:
-            data[set[3]] = data[set[1]] * data[set[2]]
-        case .finised:
-            return true
-        default:
-            fatalError()
-        }
-        parseCommands()
-        return false
+    var output:Int{
+        return data[0]
     }
-    
-    func parseCommands(){
-        commands = data.chunked(into: 4)
-        print(commands)
-    }
-}
-
-extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        return stride(from: 0, to: count, by: size).map {
-            Array(self[$0 ..< Swift.min($0 + size, count)])
-        }
+    func set(at position: Int, value:Int){
+        data[position] = value
     }
 }
