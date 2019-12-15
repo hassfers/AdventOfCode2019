@@ -11,30 +11,29 @@ func DayFour(){
     let min = 123257
     let max = 647015
     var passwords:[Int] = []
-    print(111111.neverDecreases())
-    print(123444.neverDecreases())
-//    for i in min ... max {
-//        if (i.neverDecreases() && i.hasTwoAdjacentDigits()) {
-//            passwords.append(i)
-//        }
-//    }
+    for i in min ... max {
+        if (i.neverDecreases() && i.hasTwoAdjacentDigits()) {
+            passwords.append(i)
+        }
+    }
     print(passwords.count)
 }
 
 extension Int{
     func hasTwoAdjacentDigits()-> Bool {
-        let string = String(self)
-        return string.contains("00")
-            || string.contains("11")
-            || string.contains("22")
-            || string.contains("33")
-            || string.contains("44")
-            || string.contains("55")
-            || string.contains("66")
-            || string.contains("77")
-            || string.contains("88")
-            || string.contains("99")
+        let doubles = [0,1,2,3,4,5,6,7,8,9]
+        let digits = self.sixDigits()
+        var value = false
+        doubles.forEach { double in
+            if (digits.filter {
+                $0 == double
+            }.count == 2){
+                value = true
+            }
+        }
+        return value
     }
+    
     
     func neverDecreases()->Bool{
         for i in (0...4) {
