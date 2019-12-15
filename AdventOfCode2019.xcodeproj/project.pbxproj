@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C1064A7023A2576200B60253 /* DayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1064A6F23A2576200B60253 /* DayTwo.swift */; };
 		C1064A7223A25B2500B60253 /* IntCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1064A7123A25B2500B60253 /* IntCode.swift */; };
+		C16728A723A3E0FF001321D8 /* DayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16728A623A3E0FF001321D8 /* DayThree.swift */; };
+		C16728A923A3EC44001321D8 /* DayThreeInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16728A823A3EC44001321D8 /* DayThreeInputData.swift */; };
 		C1F2CF7923A24C3A00918935 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2CF7823A24C3A00918935 /* main.swift */; };
 		C1F2CF8023A24C4B00918935 /* DayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2CF7F23A24C4B00918935 /* DayOne.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		C1064A6F23A2576200B60253 /* DayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwo.swift; sourceTree = "<group>"; };
 		C1064A7123A25B2500B60253 /* IntCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntCode.swift; sourceTree = "<group>"; };
+		C16728A623A3E0FF001321D8 /* DayThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayThree.swift; sourceTree = "<group>"; };
+		C16728A823A3EC44001321D8 /* DayThreeInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayThreeInputData.swift; sourceTree = "<group>"; };
 		C1F2CF7523A24C3A00918935 /* AdventOfCode2019 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2019; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F2CF7823A24C3A00918935 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C1F2CF7F23A24C4B00918935 /* DayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOne.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				C1F2CF7F23A24C4B00918935 /* DayOne.swift */,
 				C1064A6F23A2576200B60253 /* DayTwo.swift */,
 				C1064A7123A25B2500B60253 /* IntCode.swift */,
+				C16728A623A3E0FF001321D8 /* DayThree.swift */,
+				C16728A823A3EC44001321D8 /* DayThreeInputData.swift */,
 			);
 			path = AdventOfCode2019;
 			sourceTree = "<group>";
@@ -129,10 +135,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16728A923A3EC44001321D8 /* DayThreeInputData.swift in Sources */,
 				C1F2CF8023A24C4B00918935 /* DayOne.swift in Sources */,
 				C1064A7023A2576200B60253 /* DayTwo.swift in Sources */,
 				C1064A7223A25B2500B60253 /* IntCode.swift in Sources */,
 				C1F2CF7923A24C3A00918935 /* main.swift in Sources */,
+				C16728A723A3E0FF001321D8 /* DayThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
