@@ -222,8 +222,8 @@
             filePath = "AdventOfCode2019/DayEight.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "DayEight()"
             landmarkType = "9">
          </BreakpointContent>
@@ -231,15 +231,95 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "54C613C4-0298-4CFB-92FE-83F5BBBAF0E5"
+            uuid = "2AAE8B6E-2F58-4118-8234-E8518EFD7853"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdventOfCode2019/DayEight.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "DayEight()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADBE019A-FC2A-4AAC-A2D2-3930E7ADBCCE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "test.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "test()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE2CD9DA-3C31-45ED-9A99-6849B713E508"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdventOfCode2019/DayEight.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "DayEight()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "AE2CD9DA-3C31-45ED-9A99-6849B713E508 - edc0ef419fc48025"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdventOfCode2019.DayEight() -&gt; ()"
+                  moduleName = "AdventOfCode2019"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stefanhassferter/privatDev/AdventOfCode2019/AdventOfCode2019/DayEight.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "3389">
+               </Location>
+               <Location
+                  uuid = "AE2CD9DA-3C31-45ED-9A99-6849B713E508 - 45df7a4b025ef450"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 ((index: Swift.Int, color: Swift.Character)) -&gt; Swift.Character in AdventOfCode2019.DayEight() -&gt; ()"
+                  moduleName = "AdventOfCode2019"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stefanhassferter/privatDev/AdventOfCode2019/AdventOfCode2019/DayEight.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9983F7D4-B9DE-40FB-8928-22FF03815438"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdventOfCode2019/DayEight.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "DayEight()"
             landmarkType = "9">
          </BreakpointContent>
