@@ -12,6 +12,10 @@ class IntCode{
     
     
     var data: [Int]
+    var inputBuffer: [Int] = []
+    var outputBuffer: [Int] = []
+    var inputCounter = 0
+    var inputAutomaticMode = false
     
     init(data:[Int]){
         self.data = data
@@ -43,15 +47,30 @@ class IntCode{
                 stackPointer += 4
                 operationPointer = 2
             case .input:
-                print("please enter Integer")
-                guard let input = readLine(),
-                    let int = Int(input) else { fatalError("only Ints Supported") }
-                data[data[stackPointer + 1]] = int
+                var input:Int
+                if inputAutomaticMode {
+                    input = inputBuffer[inputCounter]
+                    print("AutomaticMode: Input = \(input) Counter=\(inputCounter)")
+                    inputCounter += 1
+                } else {
+                    print("please enter Integer")
+                    guard let stringInput = readLine(),
+                        let int = Int(stringInput) else { fatalError("only Ints Supported") }
+                    input = int
+                }
+                data[data[stackPointer + 1]] = input
                 stackPointer += 2
                 break
             case .output:
                 print()
-                print("output: \(getValue(for: stackPointer + 1, instruction: operationPointer, in: opcodes))")
+                let output = getValue(for: stackPointer + 1, instruction: operationPointer, in: opcodes)
+                if inputCounter + 1 < inputBuffer.count{
+                    inputBuffer.insert(output, at: inputCounter + 1)
+                } else {
+                    inputBuffer.append(output)
+                }
+                outputBuffer.append(output)
+                print("output: \(output)")
                 stackPointer += 2
                 break
             case .jumpIfTrue:
@@ -77,7 +96,7 @@ class IntCode{
                     stackPointer += 3
                 }
                 operationPointer = 2
-                //do not increase stackPointer
+            //do not increase stackPointer
             case .lessThen:
                 let value1 = getValue(for: stackPointer + 1, instruction: operationPointer, in: opcodes)
                 operationPointer += 1

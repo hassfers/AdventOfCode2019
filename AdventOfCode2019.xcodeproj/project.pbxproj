@@ -67,6 +67,8 @@
 				C16728AA23A6D253001321D8 /* DayFour.swift */,
 				C16728AC23A6E870001321D8 /* DayFive.swift */,
 				C16728A823A3EC44001321D8 /* DayThreeInputData.swift */,
+				C1542ACF23A7EDF200B54F26 /* DaySix.swift */,
+				C1F09E8623A8C89E0046C6FC /* DaySixData.swift */,
 			);
 			path = FinishedDays;
 			sourceTree = "<group>";
@@ -92,9 +94,7 @@
 			children = (
 				C1F2CF7823A24C3A00918935 /* main.swift */,
 				C1064A7123A25B2500B60253 /* IntCode.swift */,
-				C1542ACF23A7EDF200B54F26 /* DaySix.swift */,
 				C10AB39D23A7F7F60034CDA0 /* DaySeven.swift */,
-				C1F09E8623A8C89E0046C6FC /* DaySixData.swift */,
 				C16728AE23A77CDC001321D8 /* FinishedDays */,
 			);
 			path = AdventOfCode2019;
