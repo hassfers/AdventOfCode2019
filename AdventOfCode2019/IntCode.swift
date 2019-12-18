@@ -14,8 +14,14 @@ class IntCode{
     var data: [Int]
     var inputBuffer: [Int] = []
     var outputBuffer: [Int] = []
+    
+    var initial = true
     var inputCounter = 0
     var inputAutomaticMode = false
+    var lastOutput = 0
+    var isFinished = false
+    var stackPointer = 0
+//    var nextInput = 0
     
     init(data:[Int]){
         self.data = data
@@ -25,8 +31,12 @@ class IntCode{
         startCommands(from: 0)
     }
     
+    func resume(){
+        startCommands(from: stackPointer)
+    }
+    
     func startCommands(from startPosition: Int) {
-        var stackPointer = startPosition
+        stackPointer = startPosition
         var operationPointer = 2
         while data[stackPointer] != 99 && stackPointer < data.count {
             let opcodes = parseOpCode(data[stackPointer])
@@ -50,6 +60,7 @@ class IntCode{
                 var input:Int
                 if inputAutomaticMode {
                     input = inputBuffer[inputCounter]
+//                    input = nextInput
                     print("AutomaticMode: Input = \(input) Counter=\(inputCounter)")
                     inputCounter += 1
                 } else {
@@ -62,17 +73,17 @@ class IntCode{
                 stackPointer += 2
                 break
             case .output:
-                print()
                 let output = getValue(for: stackPointer + 1, instruction: operationPointer, in: opcodes)
-                if inputCounter + 1 < inputBuffer.count{
-                    inputBuffer.insert(output, at: inputCounter + 1)
-                } else {
-                    inputBuffer.append(output)
-                }
-                outputBuffer.append(output)
+//                if inputCounter + 1 < inputBuffer.count{
+//                    inputBuffer.insert(output, at: inputCounter + 1)
+//                } else {
+//                    inputBuffer.append(output)
+//                }
+//                outputBuffer.append(output)
+                lastOutput = output
                 print("output: \(output)")
                 stackPointer += 2
-                break
+                return
             case .jumpIfTrue:
                 let value1 = getValue(for: stackPointer + 1, instruction: operationPointer, in: opcodes)
                 operationPointer += 1
@@ -112,13 +123,17 @@ class IntCode{
                 operationPointer = 2
                 stackPointer += 4
             case .finished:
-                break
+                 print("Program ended")
+                isFinished = true
+                return
             default:
                 fatalError()
                 break
             }
         }
-        print("Program ended")
+        if data[stackPointer] == 99{
+            isFinished = true
+        }
     }
     
     var output:Int{
